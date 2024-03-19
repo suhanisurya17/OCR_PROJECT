@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - OCR Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        nav {
+            background-color: #764ba2;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+          text-align:center;
+          color:#333;
+          margin-bottom:20px;
+          font-size: 24px; /* Increased font size */
+          text-transform: uppercase; /* Uppercase text */
+        }
+        p {
+          font-size:16px;
+          line-height:1.6;
+          color:#333;
+          margin-top:10px;
+          border-left: 3px solid #007bff; /* Added left border */
+          padding-left: 10px; /* Added padding to the left of the text */
+        }
+        .color-option {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 50%;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Settings - OCR Website</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="#">Settings</a>
+    </nav>
+    <div class="container">
+        <h2>Color Settings</h2>
+        <p>Select a color scheme for the website:</p>
+
+        <div class="color-options">
+            <div class="color-option" style="background-color:#007bff"></div>
+            <div class="color-option" style="background-color:#28a745"></div>
+            <div class="color-option" style="background-color:#dc3545"></div>
+        </div>
+
+        <script>
+            const colorOptions = document.querySelectorAll('.color-option');
+
+            colorOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    document.body.style.backgroundColor = option.style.backgroundColor;
+                });
+            });
+        </script>
+
+    </div>
+
+</body>
+</html>

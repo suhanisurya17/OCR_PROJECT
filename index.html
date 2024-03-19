@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        nav {
+            background-color: #764ba2;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out; /* Added transition effect */
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker color on hover */
+        }
+        h1 {
+          text-align:center;
+          color:#333;
+          margin-bottom:20px;
+          font-size: 24px; /* Increased font size */
+          text-transform: uppercase; /* Uppercase text */
+        }
+        p {
+          font-size:16px;
+          line-height:1.6;
+          color:#333;
+          margin-top:10px;
+          border-left: 3px solid #007bff; /* Added left border */
+          padding-left: 10px; /* Added padding to the left of the text */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OCR Website</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a> | <a href="aboutus.html">About Us</a> | <a href="settings.html">Settings</a>
+    </nav>
+    <div class="container">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Select an image to upload:</label><br>
+            <input type="file" id="file" name="file" accept="image/*"><br><br>
+            <button type="submit">Upload</button>
+        </form>
+
+        <h2>Extracted Text</h2>
+        <p>{{ extracted_text }}</p>
+        <button onclick="copyToClipboard()">Copy Text</button>
+    </div>
+
+<script>
+function copyToClipboard() {
+    const text = document.querySelector('p').innerText.trim();
+    navigator.clipboard.writeText(text);
+}
+</script>
+
+</body>
+</html>
