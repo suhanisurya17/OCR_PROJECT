@@ -1,5 +1,7 @@
-# OCR Project Setup
 
+![text-recognition](https://github.com/user-attachments/assets/7d689afc-e56a-41d8-a158-3d58dce10b8c)
+
+# OCR Project Setup
 Follow these steps to set up and run the project.
 
 ## Prerequisites
