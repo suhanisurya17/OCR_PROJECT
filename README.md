@@ -3,7 +3,9 @@
 create a new python project and enter the terminal to create a venv
 # python -m venv venv
 create a new folder called "ocr_project"
+#
 make sure you have a node_modules folder
+#
 pip install Flask
 pip install pytesseract
 pip install Pillow
