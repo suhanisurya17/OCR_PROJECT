@@ -13,10 +13,10 @@ Follow these steps to set up and run the project.
 Open the terminal and run:
 ```sh
 python -m venv venv
-mkdir ocr_project
-cd ocr_project
-source ../venv/bin/activate
-pip install Flask pytesseract Pillow
+source ./venv/bin/activate
+pip install Flask
+pip install pytesseract
+pip install Pillow
 npm install --local http-server
-mkdir node_modules
+cd ocr_project
 python app.py
